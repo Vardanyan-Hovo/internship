@@ -1,0 +1,47 @@
+1)What is a SOAP?
+    SOAP. Simple Object Access Protocol
+
+    Simple Object Access Protocol (SOAP) is a lightweight XML-based protocol that is used for the exchange of information in decentralized, distributed application environments.
+    Simple Object Access Protocol (SOAP) թեթև XML-ի վրա հիմնված արձանագրություն է, որն օգտագործվում է տեղեկատվության փոխանակման համար ապակենտրոնացված, բաշխված կիրառական միջավայրերում:
+
+    SOAP defines a standard communication protocol specification for XML-based message exchange
+2)SOAP requires less plumbing code -- meaning low-level, infrastructural code that connects main code modules together
+
+3)SOAP web services are useful for asynchronous processing and invocation
+
+4)Envelope, Body
+
+4)Sample Call
+    POST /StockQuote HTTP/1.1
+    Host: www.stockquoteserver.com
+    Content-Type: text/xml;
+    charset="utf-8"
+    Content-Length: nnnn
+    SOAPAction: "Some-URI"
+    <?xml version="1.0"?>
+    <SOAP-ENV:Envelope
+    xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+    SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+    <SOAP-ENV:Body>
+        <m:GetLastTradePrice xmlns:m="Some-URI">
+        <symbol>DIS</symbol>
+        </m:GetLastTradePrice>
+    </SOAP-ENV:Body>
+    </SOAP-ENV:Envelope>
+
+
+5)Sample Response
+    HTTP/1.1 200 OK
+    Content-Type: text/xml;
+    charset="utf-8"
+    Content-Length: nnnn
+    <?xml version="1.0"?>
+    <SOAP-ENV:Envelope
+    xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+    SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+    <SOAP-ENV:Body>
+        <m:GetLastTradePriceResponse xmlns:m="Some-URI">
+        <Price>34.5</Price>
+        </m:GetLastTradePriceResponse>
+    </SOAP-ENV:Body>
+    </SOAP-ENV:Envelope>
