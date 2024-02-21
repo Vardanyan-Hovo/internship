@@ -1,0 +1,28 @@
+//<<<<<<<<<    JavaScript is an interpreted language   >>>>>>>>>>>>>
+// 1. Interpretation Time:
+//     JavaScript code is typically interpreted at runtime by the JavaScript engine. 
+//     This means that the code is read and executed line by line as the program runs. 
+//     Any syntax errors or runtime errors are usually detected during the interpretation phase.
+
+// 2. Execution Time:
+//     Execution time in JavaScript refers to the period when the code is actually running and
+//     performing its operations. During execution, variables are assigned values, functions 
+//     are called, and objects are manipulated according to the logic defined in the code.
+
+// 3. Dynamic Typing:
+//     One of the characteristics of JavaScript is dynamic typing, which means that variable
+//     types are determined at runtime rather than at compile time. This allows for flexibility 
+//     but can also lead to unexpected behavior if not handled carefully.
+
+// 4. Just-In-Time (JIT) Compilation:
+//     While JavaScript is primarily an interpreted language, modern JavaScript engines,
+//     such as V8 (used in Chrome) and SpiderMonkey (used in Firefox), utilize techniques like 
+//     Just-In-Time (JIT) compilation to optimize performance. JIT compilation involves 
+//     translating JavaScript code into machine code at runtime, allowing for faster execution.
+
+// 5. Error Detection:
+//     Syntax errors in JavaScript code are typically detected during the parsing phase, which
+//     can be considered as a form of compile time. However, many other types of errors, such 
+//     as type errors or logic errors, may only become apparent during runtime when the code 
+//     is executed.
+

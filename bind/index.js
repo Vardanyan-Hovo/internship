@@ -4,7 +4,7 @@ debugger;
 function myBind(foo, ...context) {
     return function(...arg) {
         if (context.length > 1) {
-            let arr = context.reduce((e, value, index) =>{
+            let arr = context.reduce((e, value, index) => {
                 if (index) {
                     e.push(value);
                 }
