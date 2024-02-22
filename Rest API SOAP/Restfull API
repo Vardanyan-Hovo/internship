@@ -16,7 +16,7 @@
         Data access, workload management and security are the server's domain.
             Տվյալների հասանելիությունը, ծանրաբեռնվածության կառավարումը և անվտանգությունը սերվերի տիրույթն են:
 
-    b)Layered system. 
+    b)Layered system.//շերտերից սերվերների
         REST allows for an architecture composed of multiple layers of servers.
         REST-ը թույլ է տալիս ստեղծել մի ճարտարապետություն, որը բաղկացած է սերվերների մի քանի շերտերից:
  
@@ -24,8 +24,10 @@
         All calls are stateless; nothing can be retained by the RESTful service between executions.
 
     d)Use of a uniform interface (UI)
-        Use of a uniform interface (UI). Resources should be uniquely identifiable through a single URL, and only by using the underlying methods of the network protocol, such as DELETE, PUT and GET with HTTP, should it be possible to manipulate a resource.
-        Միատեսակ ինտերֆեյսի (UI) օգտագործումը: Ռեսուրսները պետք է եզակի նույնականացվեն մեկ URL-ի միջոցով և միայն օգտագործելով ցանցային արձանագրության հիմքում ընկած մեթոդները, ինչպիսիք են DELETE, PUT և GET-ը HTTP-ով, եթե հնարավոր լինի շահարկել ռեսուրսը:
+        Resources should be uniquely identifiable through a single URL, and only by using the underlying methods
+         of the network protocol, such as DELETE, PUT and GET with HTTP, should it be possible to manipulate a resource.
+        Միատեսակ ինտերֆեյսի (UI) օգտագործումը: Ռեսուրսները պետք է եզակի նույնականացվեն մեկ URL-ի միջոցով և միայն օգտագործելով ցանցային արձանագրության հիմքում ընկած մեթոդները, 
+        ինչպիսիք են DELETE, PUT և GET-ը HTTP-ով, եթե հնարավոր լինի շահարկել ռեսուրսը:
     e)Resource Caching
         All resources should allow caching unless explicitly indicated that caching is not possible.
         Բոլոր ռեսուրսները պետք է թույլ տան քեշավորում, եթե հստակորեն նշված չէ, որ քեշավորումը հնարավոր չէ:
@@ -38,7 +40,6 @@
         /api/logup
         /api/v1/login
         /api/v1/logup
-    h)
     
 
 

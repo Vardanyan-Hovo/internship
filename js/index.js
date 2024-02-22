@@ -174,7 +174,7 @@ class Animal {
   dog.speak(); // Outputs: Buddy barks.
 
   console.log("(dog instanceof Dog)   == " + (dog instanceof Dog))
-  console.log("(dog instanceof dog)   == " + (dog instanceof Animal))
+  console.log("(dog instanceof Animal)   == " + (dog instanceof Animal))
   console.log("(animl instanceof Dog) == " + (animl instanceof Dog))
 
 
@@ -214,7 +214,7 @@ console.log("\n\n Polymorphism Run-time")
 // overriding. Method overriding occurs when a subclass provides a specific implementation of a 
 // method that is already defined in its superclass.
 
-class Animal {
+class Animal2 {
     constructor(name) {
         this.name = name;
     }
@@ -224,7 +224,7 @@ class Animal {
 }
 
 // Child class
-class Dog extends Animal {
+class Dog2 extends Animal2 {
     constructor(name) {
         super(name);
     }
@@ -235,7 +235,7 @@ class Dog extends Animal {
     }
 }
 
-const dog2 = new Dog('Buddy');
+const dog2 = new Dog2('Buddy');
 
 dog2.speak(); // Outputs: Buddy barks.
 
@@ -243,8 +243,8 @@ dog2.speak(); // Outputs: Buddy barks.
 
 console.log("\n\n Polymorphism Compile-time")
 //2 Compile-time polymorphism, also known as static polymorphism, is a mechanism in 
-// programming languages where the compiler determines which function or method to call at 
-// compile time based on the number, types, and order of arguments passed to it.
+//  programming languages where the compiler determines which function or method to call at 
+//  compile time based on the number, types, and order of arguments passed to it.
 
 class Calculator {
     // Method overloading for addition
@@ -262,19 +262,45 @@ console.log(calc.add(2, 3));
 console.log(calc.add(2, 3, 4));
 
 //------------------------------------------------------------- OOP  Abstraction
-
-// hiding the complexity of an object or a module and focusing only on the features 
-// and functions that are necessary
+console.log("\n\n OOP  Abstraction   1111")
 
 class Figure{
+    constructor(name) {
+        this.name = name
+    }
+}
+
+
+class Circle extends Figure {
     constructor(){
 
     }
 }
 
-
-class Circle extends Figur {
-    constructor(){
-
-    }
+//------------------------------------------------------------- OOP  Abstraction
+console.log("\n\n OOP  Abstraction  2222")
+//Creating a constructor function
+function Vehicle()
+{
+    this.vehicleName="vehicleName";
+    throw new Error("You cannot create an instance of Abstract Class");
 }
+
+Vehicle.prototype.display=function()
+{
+    return "Vehicle is: "+this.vehicleName;
+}
+
+//Creating a constructor function
+function Bike(vehicleName)
+{
+    this.vehicleName=vehicleName;
+}
+//Creating object without using the function constructor
+console.log(Vehicle.prototype);
+console.log(Vehicle);
+
+
+Bike.prototype=Object.create(Vehicle.prototype);
+var bike=new Bike("Honda");
+document.writeln(bike.display());

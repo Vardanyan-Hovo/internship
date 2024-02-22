@@ -1,3 +1,69 @@
-1)What is an API
+1) What is an API
     Application programming interface (API) is code that enables two 
     software programs to communicate with each other.
+
+
+
+2) One of the most critical steps is identifying an universal API management solution. 
+    Ամենակարևոր քայլերից մեկը API-ի կառավարման ունիվերսալ լուծում գտնելն է:
+
+3) Companies must choose an API management solution that enables 
+    developers to consume all of an organization's APIs through a single catalog.
+
+
+4) How do APIs work?
+    API architecture is usually explained in terms of client and server. The application
+    sending the request is called the client, and the application sending the response is 
+    called the server. So in the weather example, the bureau’s weather database is the server, 
+    and the mobile app is the client.
+
+5) SOAP "Simple Object Access Protocol"
+    These APIs use Simple Object Access Protocol. Client and server exchange messages using XML.
+    This is a less flexible API that was more popular in the past.
+    It used in the banking industry
+
+6) RPC "Remote Procedure Calls"
+    a)  These APIs are called "Remote Procedure Calls".
+        The client completes a function (or procedure) on the server, and the server sends the output back to the client.
+
+    b)  (RPC) APIs enable communication between different processes or systems by allowing 
+        a client to invoke procedures or functions on a remote server as if they were local function calls. This abstraction 
+        simplifies the process of building distributed systems, as developers can interact with remote services in a manner 
+        similar to calling functions within the same application.
+
+    c)  RPC APIs are commonly used in various distributed systems, including microservices architectures, client-server applications,
+        and inter-process communication between different components within an application.
+
+7) Websocket APIs
+    Websocket API is another modern web API development that uses JSON objects to pass data. A WebSocket API supports two-way communication
+    between client apps and the server. The server can send callback messages to connected clients, making it more efficient than REST API.
+
+
+8) XML-RPC: A simple protocol that uses XML to encode the remote procedure calls and HTTP as the transport mechanism.
+
+10) JSON-RPC: Similar to XML-RPC but uses JSON (JavaScript Object Notation) for data serialization.
+
+11) gRPC (Google Remote Procedure Call): A high-performance RPC framework developed by Google, which uses Protocol Buffers 
+    (protobuf) for data serialization and HTTP/2 for transport, with support for multiple programming languages.
+
+
+12) "Web API" or "Web Service API" is an "Application Processing Interface" between a web server and web browser.
+     All web services are APIs but not all APIs are web services. 
+     REST API is a special type of Web API that uses the standard architectural style explained above.
+
+13) What are "API integrations"?
+    API integrations are software components that automatically update data between clients and servers.
+    Some examples of API integrations are when automatic data sync to the cloud from your phone image gallery,
+    or the time and date automatically sync on your laptop when you travel to another time zone.
+    Enterprises can also use them to efficiently automate many system functions.
+
+15)benefits of REST APIs : 
+    1)Integration:              APIs are used to integrate new applications with existing software systems(integrate with the server)
+    2)Innovation:               making changes at the API level without having to re-write the whole code.
+    3)Expansion:                APIs present a unique opportunity for businesses to meet their clients’ needs across different platforms
+        //Ընդլայնումը.
+    4)Ease of maintenance:      Each system is obliged(պարտավոր) to make internal changes so that the API is not impacted (ազդեցություն չունենա)
+        //Տեխնիկական սպասարկման հեշտություն
+
+16)What are the different types of APIs?
+
