@@ -49,7 +49,7 @@
 
 12) "Web API" or "Web Service API" is an "Application Processing Interface" between a web server and web browser.
      All web services are APIs but not all APIs are web services. 
-     REST API is a special type of Web API that uses the standard architectural style explained above.
+     REST API is a special type of Web API that uses the standard architectural style.
 
 13) What are "API integrations"?
     API integrations are software components that automatically update data between clients and servers.

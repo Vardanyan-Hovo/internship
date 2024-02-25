@@ -18,6 +18,7 @@
     charset="utf-8"
     Content-Length: nnnn
     SOAPAction: "Some-URI"
+    <soap:Header/>
     <?xml version="1.0"?>
     <SOAP-ENV:Envelope
     xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
@@ -35,6 +36,7 @@
     Content-Type: text/xml;
     charset="utf-8"
     Content-Length: nnnn
+    <soap:Header/>
     <?xml version="1.0"?>
     <SOAP-ENV:Envelope
     xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
@@ -45,3 +47,28 @@
         </m:GetLastTradePriceResponse>
     </SOAP-ENV:Body>
     </SOAP-ENV:Envelope>
+
+
+6)SOAP requires less plumbing code -- SOAP требует меньше сантехнического кода —
+
+    meaning low-level, infrastructural code that connects main code modules together -- than REST services design. 
+        նշանակում է ցածր մակարդակի ենթակառուցվածքային կոդ, որը միացնում է հիմնական կոդի մոդուլները, քան REST ծառայությունների դիզայնը:
+    The Web Services Description Language describes a common set of rules to define the messages,bindings, 
+        Վեբ ծառայությունների նկարագրության լեզուն նկարագրում է կանոնների ընդհանուր հավաքածու՝ հաղորդագրությունները, կապերը,
+    operations and location of the service. SOAP web services are useful for asynchronous processing and invocation
+        ծառայության գործառնությունները և գտնվելու վայրը. SOAP վեբ ծառայություններն օգտակար են ասինխրոն մշակման և կանչի համար:
+
+7)Prior to REST, developers used SOAP to integrate APIs. To make a call, developers handwrote an XML document with a Remote Procedure Call (RPC) in the body.
+​
+8)До REST разработчики использовали SOAP для интеграции API. Чтобы совершить вызов, разработчики вручную написали XML-документ 
+    с удаленным вызовом процедур (RPC) в теле. Затем они указали конечную точку и отправили свой конверт SOAP в конечную точку.
+    В 2000 году Рой Филдинг и группа разработчиков решили создать стандарт, позволяющий любому серверу взаимодействовать с любым другим сервером.
+    Он определил REST и архитектурные ограничения, описанные выше, в своей докторской диссертации 2000 года. диссертацию в Калифорнийском 
+    университете в Ирвайне. Эти универсальные правила облегчают разработчикам интеграцию программного обеспечения.
+
+    Facebook и Twitter выпустили свои API в 2006 году, поддавшись давлению разработчиков, которые очистили сайты и создали API «Франкенштейна». 
+    Когда Amazon Web Services (AWS) помог запустить облако в 2006 году, разработчики получили доступ к пространству данных за считанные минуты с 
+    помощью REST API AWS, и спрос на общедоступные API быстро возрос.
+
+    С тех пор разработчики стали использовать RESTful API для расширения функциональности своих веб-сайтов и приложений. 
+    Сегодня REST API считаются «основой Интернета».

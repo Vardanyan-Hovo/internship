@@ -1,0 +1,134 @@
+1)  What is caching? 
+        Caching -- is the process of storing data in a cache, which is a temporary
+
+2)  flash media as cache and as a storage tier.
+
+3)  A computer RAM or random access memory is an important component in determining the
+        performance of your system. Your system and applications need a place to store and 
+        quickly access data.
+        The more applications and programs you are running, the more RAM space you need. 
+        
+        You will also need "HARD DISK DRIVES (HDD)"(կոշտ սկավառակի կրիչներ) or 
+        SOLID-state drives (SDD) for your system 
+        to reach peak performance.
+        Համակարգչի RAM-ը կամ պատահական մուտքի հիշողությունը կարևոր բաղադրիչ է ձեր համակարգի աշխատանքը 
+        որոշելու համար: Ձեր համակարգին և հավելվածներին անհրաժեշտ է տվյալներ պահելու և արագ մուտք գործելու տեղ:
+        Որքան շատ հավելվածներ և ծրագրեր եք աշխատում, այնքան ավելի շատ RAM տարածք է ձեզ անհրաժեշտ:
+        Ձեզ անհրաժեշտ կլինեն նաև կոշտ սկավառակի կրիչներ (HDD) կամ պինդ վիճակում գտնվող կրիչներ (SDD),
+        որպեսզի ձեր համակարգը հասնի առավելագույն կատարողականության:
+
+4)     You can choose from two types of RAM: SRAM and DRAM.
+        You can choose from two types of RAM: SRAM and DRAM. You need to make sure that the type of 
+        RAM you choose is compatible with the rest of your components.
+        Դուք կարող եք ընտրել երկու տեսակի RAM՝ SRAM և DRAM: Դուք պետք է համոզվեք, 
+        որ ձեր ընտրած RAM-ի տեսակը համատեղելի է ձեր մնացած բաղադրիչների հետ:
+
+5)    SRAM:SRAM or Static RAM 
+      SRAM or Static RAM is a semiconductor memory that utilizes Bistable latching circuitry to store each bit. 
+      This type of RAM stores data using the six transistor memory cells. Static RAM is mostly used as a cache 
+      memory for the processor (CPU).
+      SRAM կամ Static RAM-ը կիսահաղորդչային հիշողություն է, որն օգտագործում է Bistable սողնակային սխեման յուրաքանչյուր բիթ պահելու համար:
+      Այս տեսակի RAM-ը պահում է տվյալները՝ օգտագործելով տրանզիստորային հիշողության վեց բջիջները: Ստատիկ RAM-ը հիմնականում օգտագործվում է 
+      որպես պրոցեսորի (CPU) քեշ հիշողություն:
+
+6)    DRAM: DRAM or Dynamic RAM
+        DRAM or Dynamic RAM is widely used as a computer's main memory. This type of RAM is made up of a transistor 
+        and a capacitor within an integrated circuit. Data bits are stored in the capacitor.
+        DRAM կամ Dynamic RAM-ը լայնորեն օգտագործվում է որպես համակարգչի հիմնական հիշողություն: Այս տեսակի RAM-ը կազմված է 
+        տրանզիստորից և կոնդենսատորից ինտեգրալ սխեմայի մեջ: Տվյալների բիթերը պահվում են կոնդենսատորում:
+        Data bits are stored in the capacitor.
+        Տվյալների բիթերը պահվում են կոնդենսատորում
+
+7)      Solid-state drives (SSDs) (Mac M1)
+8)      Hard disk drives (HDDs)
+
+9)  a) Hardware cache exists at numerous levels in the IT infrastructure. 
+        It is needed because of the mismatch that exists between components.
+    //Այն անհրաժեշտ է բաղադրիչների միջև առկա անհամապատասխանության պատճառով:
+    
+    b) In input/output (I/O) terms some parts of the IT infrastructure simply
+        can’t read or write as quickly as others, so there needs to be a buffer
+        between them that can handle the more rapid ingress and egress of data.
+    
+    c) Its essential function is to provide a rapidly-accessible location for data 
+        that’s needed for currently running operations, or at least its most important
+        chunks.
+        Դրա հիմնական գործառույթն է արագ հասանելի տեղանք ապահովել տվյալ պահին գործող 
+        գործողությունների կամ առնվազն դրա ամենակարևոր հատվածների համար:
+        CPU memory is an expensive central processing unit (CPU).
+        
+        Then – dropping down a magnitude in terms of performance – there’s RAM, 
+        but this too can have a portion of SRAM,
+        Այնուհետև, կատարողականի առումով մի մեծություն իջեցնելով, կա RAM, 
+        բայց սա նույնպես կարող է ունենալ SRAM-ի մի մասը,
+
+    d) SRAM Static random-access memory
+        SRAM will hold its data permanently in the presence of power, while data in 
+        DRAM decays in seconds and thus must be periodically refreshed.
+        SRAM-ը մշտապես կպահի իր տվյալները հոսանքի առկայության դեպքում, մինչդեռ DRAM-ում տվյալները 
+        քայքայվում են վայրկյանների ընթացքում և, հետևաբար, պետք է պարբերաբար թարմացվեն:
+    e) SRAM is faster and uses less energy than DRAM but it is more expensive 
+        in terms of silicon area and cost.
+
+10)Cache is a copy
+    extremely high-performance hardware used is almost always volatile, and data would be lost if power was removed.
+    Չափազանց բարձր արդյունավետությամբ օգտագործվող սարքավորումները գրեթե միշտ անկայուն են, և տվյալները կկորչեն, եթե հոսանքազրկվի
+
+
+
+11)Caching is the ability to store copies of frequently accessed data in several places along the request-response path.
+    Քեշավորումը հաճախակի հասանելի տվյալների կրկնօրինակները պահելու հնարավորությունն է հարցում-պատասխան ճանապարհի երկայնքով մի քանի վայրերում:
+
+    a)When a consumer requests a resource representation, the request goes through a cache or a series of caches 
+        (local cache, proxy cache, or reverse proxy) toward the service hosting the resource.
+    b)By using HTTP headers, an origin server indicates whether a response can be cached and, if so, by whom, and for how long.
+        Օգտագործելով HTTP վերնագրերը, ծագման սերվերը ցույց է տալիս, թե արդյոք պատասխանը կարող է պահվել քեշում և, եթե այո, ում կողմից և որքան ժամանակով
+    c)Caches along the response path can take a copy of a response, but only if the caching metadata allows them to do so.
+        Արձագանքման ճանապարհի քեշերը կարող են վերցնել պատասխանի պատճենը, բայց միայն այն դեպքում, եթե քեշավորման մետատվյալները թույլ են տալիս դա անել:
+    d)Optimizing the network using caching improves the overall quality-of-service in the following ways:
+        Քեշավորման միջոցով ցանցի օպտիմիզացումը բարելավում է ծառայության ընդհանուր որակը հետևյալ եղանակներով
+        
+            d.a)Reduce bandwidth                Կրճատել թողունակությունը
+            d.b)Reduce latency                  Նվազեցնել հետաձգումը
+            d.c)Reduce load on servers          Նվազեցնել բեռը սերվերների վրա
+            d.d)Hide network failures           Թաքցնել ցանցի ձախողումները
+12)Caching in REST APIs
+    Being cacheable is one of the architectural constraints of REST.
+
+    a)GET requests should be cachable by default – until a special condition arises. Usually,
+        browsers treat all GET requests as cacheable.
+        հարցումները լռելյայն պետք է քեշավորվեն՝ մինչև հատուկ պայման առաջանա: Սովորաբար, բրաուզերները 
+        վերաբերվում են բոլոր GET հարցումներին, որոնք կարող են քեշավորվել:
+    b)POST requests are not cacheable by default but can be made cacheable if either an Expires header or a Cache-Control header with a directive,
+         to explicitly allows caching, is added to the response.
+        Запросы POST не кэшируются по умолчанию, но их можно сделать кэшируемыми, если к ответу добавлен заголовок "Expires" или заголовок 
+        "Cache-Control" с директивой, явно разрешающей кэширование.
+    c)Responses to PUT and DELETE requests are not cacheable at all.
+    d)HTTP dates are always expressed in GMT, never in local time.
+13)Cache Control Headers
+    Below given are main HTTP response headers that we can use to "Control Caching Behavior:"
+
+    a)Expires //Ժամկետը լրանում է
+        The Expires HTTP header specifies an absolute expiry time for a cached representation. Beyond that time, a cached representation 
+        is considered stale and must be re-validated with the origin server. To indicate that a representation never expires, a service can 
+        include a time up to one year in the future.
+    <--  Expires: Fri, 18 Jul 2023 20:00:00 GMT"  -->
+
+    b) Cache-Control
+            The header value comprises(ներառում է) one or more comma-separated directives(հրահանգներ:). These directives determine whether a response is cacheable, and if so, 
+            by whom, and for how long e.g. max-age or s-maxage directives.
+            Այս հրահանգները որոշում են, թե արդյոք պատասխանը կարող է քեշավորվել, և եթե այո, ում կողմից և որքան ժամանակով, օրինակ. max-age կամ s-maxage հրահանգներ:
+    <--  Cache-Control: max-age=3600 -->
+
+    c)Cacheable responses (whether to a GET or to a POST request) should also include a validator — either an ETag or a Last-Modified header.
+        Քեշավորվող պատասխանները (լինի GET-ի, թե POST հարցման) պետք է ներառեն նաև վավերացնող՝ կա՛մ ETag, կա՛մ վերջին փոփոխված վերնագիր
+
+
+14)ETag
+    An ETag value is an opaque string token that a server associates with a resource to uniquely identify the state of the resource over its lifetime.
+
+    If the resource at a given URL changes, a new Etag value must be generated. A comparison of them can determine whether two representations of a resource are the same.
+
+    While requesting a resource, client sends the ETag in If-None-Match header field to the server. The server matches the Etag of the requested resource and the value sent 
+    in If-None-Match header. If both values match the server sends back a 304 Not Modified status, without a body, which tells the client that the cached version of the 
+    response is still good to use (fresh).
