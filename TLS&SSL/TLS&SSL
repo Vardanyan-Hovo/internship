@@ -1,0 +1,5 @@
+// MAN-in-the-middle [MITM]
+//           hacker
+// client -> someone -> server
+
+// where we take certificate called [CA] Center Authority

@@ -123,12 +123,14 @@
     c)Cacheable responses (whether to a GET or to a POST request) should also include a validator — either an ETag or a Last-Modified header.
         Քեշավորվող պատասխանները (լինի GET-ի, թե POST հարցման) պետք է ներառեն նաև վավերացնող՝ կա՛մ ETag, կա՛մ վերջին փոփոխված վերնագիր
 
+    d)see //Redis Caching in Node.js
+        https://www.youtube.com/watch?v=oaJq1mQ3dFI
 
 14)ETag
-    An ETag value is an opaque string token that a server associates with a resource to uniquely identify the state of the resource over its lifetime.
+    это непрозрачный строковый токен, который сервер связывает с ресурсом, чтобы однозначно идентифицировать состояние ресурса на протяжении его жизненного цикла.
 
-    If the resource at a given URL changes, a new Etag value must be generated. A comparison of them can determine whether two representations of a resource are the same.
+    Если ресурс по данному URL-адресу изменится, необходимо сгенерировать новое значение Etag. Их сравнение может определить, являются ли два представления ресурса одинаковыми.
 
-    While requesting a resource, client sends the ETag in If-None-Match header field to the server. The server matches the Etag of the requested resource and the value sent 
-    in If-None-Match header. If both values match the server sends back a 304 Not Modified status, without a body, which tells the client that the cached version of the 
-    response is still good to use (fresh).
+    При запросе ресурса клиент отправляет серверу ETag в поле заголовка If-None-Match. Сервер соответствует Etag запрошенного ресурса и отправленному значению.
+    в заголовке If-None-Match. Если оба значения совпадают, сервер отправляет обратно статус 304 Not Modified без тела, который сообщает клиенту, что кэшированная версия
+    ответ все еще можно использовать (свежий).

@@ -1,3 +1,5 @@
+"use strict"
+
 // JavaScript has 8 Datatypes
 // 1. String
 // 2. Number
@@ -18,8 +20,8 @@ const Obj = { a: 1, b: 2 ,c:{
 
 const ObjNew = new Object(Obj)
 const ObjSpread = {...Obj};
-const Objectassign = Object.assign({}, Obj);
-const ObjectSello = Object.fromEntries(Object.entries(Obj));
+const Objectassign = Object.assign({}, Obj);//{...obj}
+const ObjectSello = Object.fromEntries(Object.entries(Obj)); //fromEntries object (entries[key, value])
 
 console.log("---- Sello copy ----")
 
@@ -61,16 +63,16 @@ const entries = Object.entries(originalObject);
 const copy = Object.fromEntries(entries);
 
 // Output
-console.log("Original Object:", JSON.stringify(originalObject, undefined,2));
-console.log("Copied Object:", JSON.stringify(copy,undefined,2));
+console.log("Original Object:", JSON.stringify(originalObject, undefined, 2));
+console.log("Copied Object:", JSON.stringify(copy, undefined, 2));
 
 // Modifying the copied object
 copy.a = 10;
 copy.c.nested = false;
 
 // Output after modification
-console.log("Original Object after modification:", JSON.stringify(originalObject,undefined,2));
-console.log("Copied Object after modification:", JSON.stringify(copy,undefined,2));
+console.log("Original Object after modification:", JSON.stringify(originalObject, undefined, 2));
+console.log("Copied Object after modification:", JSON.stringify(copy, undefined, 2));
 
 
 //------------------------------------ Array ------------------------------------
@@ -85,7 +87,7 @@ for (let i = 1; i <= 1000; i++) {
 // Using Array.from():
 const numbers1 = Array.from({ length: 1000 }, (_, index) => index + 1);
 
-// console.log(numbers1.reduce((str,value)=>{return str+=value + " "},""));
+console.log(numbers1.reduce((str,value)=>{return str+=value + " "},""));
 
 // Using Array.fill() and Array.map():
 const numbers2 = new Array(1000).fill(0).map((_, index) => index + 1);
@@ -95,247 +97,38 @@ const numbers2 = new Array(1000).fill(0).map((_, index) => index + 1);
 console.log(numbers1.reduce((str,value)=>{return str+=value + " "},""));
 
 
+//----------------------------------------------------------------------------  Event loop
 
-//-----------------------  In JavaScript, OOP inheritance can be achieved using prototypes
+const seconds = new Date().getTime() / 1000;
 
+setTimeout(() => {
+  // prints out "2", meaning that the callback is not called immediately after 500 milliseconds.
+  console.log(`Ran after ${new Date().getTime() / 1000 - seconds} seconds`);
+}, 500);
 
-// Parent constructor function
-function Person(name, age) {
-    this.name = name;
-    this.age = age;
-}
-
-// Adding a method to the prototype of Person
-Person.prototype.sayHello = function() {
-    console.log(`Hello, my name is ${this.name} and I'm ${this.age} years old.`);
-}
-
-// Child constructor function
-function Student(name, age, grade) {
-    Person.call(this, name, age); // Calling the parent constructor
-    this.grade = grade;
-}
-
-// Inheriting from the Person prototype
-Student.prototype = Object.create(Person.prototype);
-
-
-// Adding a method to the Student prototype
-Student.prototype.sayGrade = function() {
-    console.log(`I am in grade ${this.grade}.`);
-}
-
-// Creating an instance of Student
-const student1 = new Student('Alice', 15, 9);
-const parent1 = new Person('Pier',16);
-
-// Using inherited methods
-student1.sayHello(); // Outputs: Hello, my name is Alice and I'm 15 years old.
-student1.sayGrade(); // Outputs: I am in grade 9.
-
-console.log(student1)
-console.log(parent1)
-
-
-
-//-------------------------------------    OOP classical inheritance
-
-
-
-console.log("\n\nclassical inheritance")
-
-
-// Parent class
-class Animal {
-    constructor(name) {
-      this.name = name;
-    }
-  
-    speak() {
-      console.log(`${this.name} makes a sound.`);
-    }
+while (true) {
+  if (new Date().getTime() / 1000 - seconds >= 2) {
+    console.log("Good, looped for 2 seconds");
+    break;
   }
-  
-  // Child class inheriting from Animal
-  class Dog extends Animal {
-    constructor(name, breed) {
-      super(name); // Call the constructor of the parent class
-      this.breed = breed;
-    }
-  
-    speak() {
-      console.log(`${this.name} barks.`);
-    }
-  }
-  
-  // Creating instances of classes
-  const dog = new Dog('Buddy', 'Labrador');
-  const animl = new Animal();
-  dog.speak(); // Outputs: Buddy barks.
-
-  console.log("(dog instanceof Dog)   == " + (dog instanceof Dog))
-  console.log("(dog instanceof Animal)   == " + (dog instanceof Animal))
-  console.log("(animl instanceof Dog) == " + (animl instanceof Dog))
-
-
-// -------------------------------------------------------OOP Encapsulation
-console.log("\n\n Encapsulation")
-
-function Person(name, age) {
-    let _name = name; 
-    let _age = age;
-
-    this.getName = function() {
-        return _name;
-    };
-    this.getAge = function() {
-        return _age;
-    };
-    this.setName = function(newName) {
-        _name = newName;
-    };
-    this.setAge = function(newAge) {
-        if (newAge >= 0) {
-            _age = newAge;
-        }
-    };
-}
-
-const person = new Person('Alice', 30);
-person.setName('Bob');
-person.setAge(-5);
-console.log(person.getName());
-console.log(person.getAge()); 
-
-//-------------------------------------------------------  OOP Polymorphism
-console.log("\n\n Polymorphism Run-time")
-
-//1 Run-time polymorphism (also known as dynamic polymorphism): This is achieved using method
-// overriding. Method overriding occurs when a subclass provides a specific implementation of a 
-// method that is already defined in its superclass.
-
-class Animal2 {
-    constructor(name) {
-        this.name = name;
-    }
-    speak() {
-        console.log(`${this.name} makes a sound.`);
-    }
-}
-
-// Child class
-class Dog2 extends Animal2 {
-    constructor(name) {
-        super(name);
-    }
-
-    // Overriding the speak method
-    speak() {
-        console.log(`${this.name} barks.`);
-    }
-}
-
-const dog2 = new Dog2('Buddy');
-
-dog2.speak(); // Outputs: Buddy barks.
-
-//-------------------------------------------------------  OOP Polymorphism
-
-console.log("\n\n Polymorphism Compile-time")
-//2 Compile-time polymorphism, also known as static polymorphism, is a mechanism in 
-//  programming languages where the compiler determines which function or method to call at 
-//  compile time based on the number, types, and order of arguments passed to it.
-
-class Calculator {
-    // Method overloading for addition
-    add(x, y) {
-        return x + y;
-    }
-
-    add(x, y, z) {
-        return x + y + z;
-    }
-}
-
-const calc = new Calculator();
-console.log(calc.add(2, 3));
-console.log(calc.add(2, 3, 4));
-
-//------------------------------------------------------------- OOP  Abstraction
-console.log("\n\n OOP  Abstraction   1111")
-
-class Figure{
-    constructor(name) {
-        this.name = name
-    }
 }
 
 
-class Circle extends Figure {
-    constructor(){
-
-    }
-}
-
-//------------------------------------------------------------- OOP  Abstraction
-console.log("\n\n OOP  Abstraction  2222")
-//Creating a constructor function
-function Vehicle()
-{
-    this.vehicleName="vehicleName";
-    throw new Error("You cannot create an instance of Abstract Class");
-}
-
-Vehicle.prototype.display=function()
-{
-    return "Vehicle is: "+this.vehicleName;
-}
-
-//Creating a constructor function
-function Bike(vehicleName)
-{
-    this.vehicleName=vehicleName;
-}
-//Creating object without using the function constructor
-console.log(Vehicle.prototype);
-console.log(Vehicle);
-
-
-Bike.prototype=Object.create(Vehicle.prototype);
-var bike=new Bike("Honda");
-document.writeln(bike.display());
+//-----------------------------------------------------------------------------------------
 
 
 
+var obj = {};
 
-//------------------------------------------------------------- recuest  
-// Example: GET /users/123
-//To access the value of the “id” parameter, you can use req.params.id in your route handler.
-app.get('/users/:id', (req, res) => {
-    const userId = req.params.id;
-    // Perform operations using the userId
+Object.defineProperty(obj, 'readOnly', {
+  value: 'This property is read-only',
+  writable: true,
+  configurable: true  // Once set to false, cannot be changed
 });
 
+console.log(obj.readOnly); // Output: This property is read-only
+obj.readOnly = "45"
+// Attempting to delete the property
+console.log(obj.readOnly); // Output: This property is read-only (Property still exists)
+delete obj.readOnly;
 
-//Example: GET /users?name=John&age=25
-//The req.query object allows you to retrieve data from the URL query string. 
-//The query string is the portion of the URL after the question mark (?) 
-//and consists of key-value pairs separated by ampersands (&).
-app.get('/users', (req, res) => {
-    const name = req.query.name;
-    const age = req.query.age;
-    // Perform operations using the name and age
-});
-
-// Example: POST /users
-// The req.body object allows you to retrieve data sent in the request body, 
-// typically used for POST or PUT requests. To access the data, you need to
-//  use a middleware such as body-parser or the built-in express.json middleware.
-app.post('/users', (req, res) => {
-    const userData = req.body;
-    // Perform operations using the userData
-  });
-
-//   Conclusion:
-// Use req.params when you have dynamic segments in your route patterns, req.query
-// when you want to retrieve data from the query string, and req.body for data sent in the request body
