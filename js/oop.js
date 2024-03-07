@@ -383,3 +383,72 @@ student1.sayGrade(); // Outputs: I am in grade 9.
 console.log(student1)
 console.log(parent1)
 
+
+
+//------------------------------------------------------------------------------
+console.log("\n\n\n\n -----------------  ")
+// In summary, all statements result in the creation of empty objects {}, but the way they 
+// achieve it differs slightly due to how Object() behaves when called with or without new, 
+// and with different arguments.
+console.log(Object())
+console.log(new Object())
+console.log(new Object(undefined))
+console.log(new Object(null))
+console.log(Object(null))
+
+//--------------------------------------------------------------------------------
+
+const numberObj = new Number(1);
+console.log(typeof numberObj); // "object"
+console.log(numberObj); // "Number"
+
+
+const bigintObj = Object(1n);
+console.log(typeof bigintObj); // "object"
+console.log( bigintObj); // "BigInt"
+
+
+const symbolObj = Object(Symbol("foo"));
+console.log(typeof symbolObj); // "object"
+console.log( symbolObj); // "Symbol"
+
+//---------------------------------------------------------------------  defineProperty
+var obj = {};
+
+Object.defineProperty(obj, 'readOnly', {
+  value: 'This property is read-only',
+  writable: true,
+  configurable: true  // Once set to false, cannot be changed
+});
+
+console.log(obj.readOnly); // Output: This property is read-only
+obj.readOnly = "45"
+// Attempting to delete the property
+console.log(obj.readOnly); // Output: This property is read-only (Property still exists)
+delete obj.readOnly;
+
+
+
+//------------------------------------------------------------------    prototype
+
+
+const asd = { question: 248 };
+let newobj = {};
+console.log(newobj); // Output: {}
+
+newobj = Object.create(asd); // newobj is now created with 'asd' as its prototype.
+
+const copyobj = asd; // copyobj now references the same object as 'asd'.
+
+console.log("newobj.question           = " + newobj.question); // Output: 248
+console.log("asd.question    = " + asd.question); // Output: 248
+
+newobj.question = 48; // Modifying 'newobj' property.
+
+console.log("newobj.question           = " + newobj.question); // Output: 48
+console.log("asd.question    = " + asd.question); // Output: 248
+
+asd.question = 55; // Modifying 'asd' property.
+
+console.log("newobj.question           = " + newobj.question); // Output: 55
+console.log("asd.question    = " + asd.question); // Output: 55

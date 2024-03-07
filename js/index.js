@@ -1,4 +1,6 @@
 "use strict"
+// Document Object Model (DOM)
+
 
 // JavaScript has 8 Datatypes
 // 1. String
@@ -101,7 +103,7 @@ console.log(numbers1.reduce((str,value)=>{return str+=value + " "},""));
 
 const seconds = new Date().getTime() / 1000;
 
-setTimeout(() => {
+setTimeout(() => {  
   // prints out "2", meaning that the callback is not called immediately after 500 milliseconds.
   console.log(`Ran after ${new Date().getTime() / 1000 - seconds} seconds`);
 }, 500);
@@ -118,17 +120,72 @@ while (true) {
 
 
 
-var obj = {};
+const apple = {
+  toString() {return {}},
+  valueOf() {return "apple "}
+}
 
-Object.defineProperty(obj, 'readOnly', {
-  value: 'This property is read-only',
-  writable: true,
-  configurable: true  // Once set to false, cannot be changed
-});
+console.log(new String(apple))
+console.log( String(apple))
+console.log( "Apple :" + apple)
 
-console.log(obj.readOnly); // Output: This property is read-only
-obj.readOnly = "45"
-// Attempting to delete the property
-console.log(obj.readOnly); // Output: This property is read-only (Property still exists)
-delete obj.readOnly;
 
+//-------------------------------------------------------------------------------------------
+console.log("\n\n\n--------------")
+const y = function (){
+
+  console.log(x)
+  // conversion to number
+  const d = new Date("9/23/1197");
+  const d1 = Date("9/23/1197");
+  console.log(typeof d);
+  console.log(typeof d1);
+  console.log(+d);
+  console.log(!!25 + !"" + "")
+  console.log("console.log(3.1415) === [" + 3.1415 + "]")
+  console.log(" console.log(~3.1415) === [" + ~3.1415+"]")// ~x === -(x + 1)
+  console.log(" console.log(~~3.1415) === [" + ~~3.1415 + "]")// ~x === -(x + 1)
+}
+var x = 8;
+y();
+
+
+//---------------------------------------------------------   Null undefined ---------------------------------
+
+
+console.log("\n\n\n--------------")
+console.log(null === null)            //true
+console.log(undefined == null)        //true
+console.log(undefined === null)       //false
+console.log(undefined === undefined)  //true
+
+console.log(NaN == NaN)               //false
+console.log(typeof null)              //object
+console.log(typeof undefined)         //undefined
+console.log(typeof 25)                //number
+console.log(typeof "asdasd")          //string
+console.log(typeof String)            //function
+console.log(typeof Number())          //number
+
+
+
+//--------------------------------------------------------------  NaN  ----------------------------
+console.log("\n\n\n--------------")
+console.log("isNaN(NaN)         = " + isNaN(NaN))           //true
+console.log("isNaN('dasd')      = " + isNaN('dasd'))        //true
+console.log("isNaN('35')        = " + isNaN("35"))          //false
+console.log("isNaN(35)          = " + isNaN(35))            //false
+console.log("isNaN('0')         = " + isNaN('0'))           //false
+console.log("isNaN(0)           = " + isNaN(0))             //false
+console.log("isNaN(+0)          = " + isNaN(+0))            //false
+console.log("isNaN(-0)          = " + isNaN(-0))            //false
+console.log("isNaN('')          = " + isNaN(''))            //false
+console.log("Object.is(NaN,NaN) = " + Object.is(NaN,NaN))   //true
+console.log("Object.is(+0,-0)   = " + Object.is(+0,-0))     //false
+console.log("Object.is(+0,+0)   = " + Object.is(+0,+0))     //false
+
+
+//---------------------------------------------------------------------------------------------------
+
+
+  
