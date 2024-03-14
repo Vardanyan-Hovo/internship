@@ -166,7 +166,7 @@ console.log(typeof 25)                //number
 console.log(typeof "asdasd")          //string
 console.log(typeof String)            //function
 console.log(typeof Number())          //number
-
+console.log(typeof Array(5))                //
 
 
 //--------------------------------------------------------------  NaN  ----------------------------
@@ -189,3 +189,42 @@ console.log("Object.is(+0,+0)   = " + Object.is(+0,+0))     //false
 
 
   
+const prototype = {question : 42}
+
+//create referens prototype
+const newObj = Object.create(prototype)
+
+prototype.question = "Hello";
+console.log("\n\n\n\n newObj.question " + newObj.question)//newObj.question Hello
+console.log("prototype.question " + prototype.question)   //prototype.question Hello
+
+
+
+//this time new .question create 
+newObj.question = 72;
+console.log("\n\n\n\n newObj.question " + newObj.question)//newObj.question 72
+console.log("prototype.question " + prototype.question)   //prototype.question Hello
+
+
+
+//---------------------------------------------------------------------------------------------------
+
+
+const da = {y : 42}
+
+function foo(){}
+foo.prototype = da;
+
+const Xa = new foo();
+da.y = 99
+console.log("x.y == " + Xa.y);
+
+//---------------------------------------------------------------------------------  constructor --
+
+
+function ClassA(){}
+
+ClassA.prototype = {getValue: function (){}}
+
+
+
