@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scroll to Last Tag Example</title>
+<style>
+  .container {
+    width: 300px;
+    height: 200px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+</style>
+</head>
+<body>
+
+<div class="container" id="container">
+  <div>Tag 1</div>
+  <div>Tag 2</div>
+  <!-- Add more tags as needed -->
+</div>
+<button onclick="scrollToLastTag()">
+    click
+</button>
+<script>
+// Function to scroll to the last tag in the container
+function scrollToLastTag() {
+  var container = document.getElementById('container');
+  if (container) {
+    container.scrollTop = container.scrollHeight;
+  }
+}
+
+
+function addChild(){
+    const divs = document.createElement("div")
+    divs.innerHTML = "Tag 2";
+    document.querySelector(".container").appendChild(divs)
+}
+
+
+// scrollToLastTag();
+// Call the function to scroll to the last tag when the page loads
+window.onload = function() {
+    let x = 1;
+    while(x < 500)
+    {
+        addChild()
+        console.log("asd");
+        x++;
+    }
+};
+</script>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+1)DOM stands for Document Object Model it is the structural representation of the HTML Document
+2)Real DOM is the actual structure represented in the User Interface while 
+3)Virtual DOM is the memory representation of the same
+4)Virtual DOM is the virtual representation of Real DOM
+5)React update the state changes in Virtual DOM first and then it syncs with Real DOM
+
+6)Component Lifecycle Methods: React provides lifecycle methods that
+ allow developers to hook into various stages of a component's life.
+ These methods can be used to perform additional actions during rendering, updating, and unmounting.
+ Այս մեթոդները կարող են օգտագործվել ցուցադրման, թարմացման և ապամոնտաժման ժամանակ լրացուցիչ գործողություններ կատարելու համար:

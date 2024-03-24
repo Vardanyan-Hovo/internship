@@ -1,3 +1,6 @@
+/* CSS  Cascading Style Sheets */
+/* pixels (px), points (pt), ems (em), percentages (%) */
+
 table {
   border-collapse: collapse;
   border: 2px solid rgb(140 140 140);
@@ -38,4 +41,84 @@ tfoot th {
 tfoot td {
   font-weight: bold;
 }
-  
+
+
+
+
+/*     Priority     */
+
+
+.Priority{
+  display: flex;
+  gap:50px;
+  cursor: pointer;
+}
+
+.Priority div{
+  color: chocolate;
+}
+
+.first-div {
+  display: block; /* or inline-block, flex, etc. */
+}
+
+
+/* to show that CSS reading starts from top to bottom*/
+#A{
+  color: black;
+}
+
+
+.second-div, .second-div1,.second-div2 {
+  display: none;
+}
+
+
+
+
+
+
+/* show higher priority for id */
+/* id="A1" class="A1"  or wrot  class="A2" id="A2*/
+
+#PriorityId>div{
+  color: aqua;
+}
+
+#A{
+  color: red;
+}
+#A1{
+  color: red;
+}
+#A2{
+  color: red;
+}
+.A1{
+  color: beige;
+}
+.A2{
+  color: beige;
+}
+.Priority>div{
+  color: aqua;
+}
+
+
+
+/* how can I write code when hovering on one 
+div and changing other classes */
+.first-div:hover + .second-div{
+  display: block;
+  color: blue;
+}
+
+.first-div1:hover + .second-div1{
+  display: block;
+  color:aqua;
+}
+
+.first-div2:hover + .second-div2{
+  display: block;
+  color:burlywood;
+}

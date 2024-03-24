@@ -42,7 +42,7 @@ const as = {
     name: "Karen"
 }
 
-function bs(){
+function bs() {
     //this = {}
     //this.__proto__ = as.prototype
     this.age  = 8;

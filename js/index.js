@@ -228,3 +228,25 @@ ClassA.prototype = {getValue: function (){}}
 
 
 
+const obj = Object.create({},{
+    x:{
+      value:5
+    },
+    y:{
+      value: function(){
+        console.log("This.x = " + this.x);
+      }
+    }
+})
+
+console.log(obj.x);
+obj.y()
+
+
+
+const obj2 = Object.create({d:55})
+console.log(obj2.d)
+
+const obj3 = Object.create({})
+
+console.log(obj3)
