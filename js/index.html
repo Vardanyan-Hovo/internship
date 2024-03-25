@@ -344,6 +344,91 @@
           <p>A simple math equation: <var>x</var> = 3 + 2; </p>
         </div>
       </section>
+      <hr>
+      <section>
+        <aside>
+          <form>
+            <input type="radio" name="fav_language" value="html" > HTML
+            <input type="radio" name="fav_language" value="css"> CSS
+            <input type="radio" name="fav_language" value="css"> js
+            <input type="radio" name="fav_language" value="css"> react
+          </form>
+        </aside>
+      </section>
+      <hr>
+      <section>
+        <input type="checkbox" checked/>
+        <input type="checkbox"/>
+        <input type="checkbox"/>
+        <input type="checkbox"/>
+        <input type="checkbox"/>
+      </section>
+
+      <hr>
+      <hr>
+      <section>
+        <aside>
+          <h4>Add a submit button, and specify that the form should go to "/action_page.php".</h4>
+          <form action="/action_page.php">
+              Name: <input type="text" name="name">
+            <input type="submit">
+          </form>
+        </aside>
+        <hr>
+        <aside>
+          <h4>Specify that the form is submitted using the "POST" method.</h4>
+          <form action="/action_page.php" method="POST">
+            Name: <input type="text" name="name">
+            <input type="submit">
+          </form>
+        </aside>
+      </section>
+      <hr>
+      <hr>
+      <section>
+        <h4>In the form below, add an empty <mark>Drop Down</mark> list with the name "cars".</h4>
+        <form action="/action_page.php">
+          <select name="cars">
+          </select>
+        </form>
+      </section>
+      <hr>
+      <section>
+        <form action="/page name" method="post">
+          <select name="cars">
+            <option value="volvo">VOLVO</option>
+            <option value="BMW">BMW</option>
+          </select>
+        </form>
+      </section>
+      <hr>
+      <hr>
+        <section>
+          <h4>In the form below, add a text area with the name "note".</h4>
+          <form action="/action_page.php">
+            <textarea name="note" placeholder="hello"></textarea>
+            </form>
+        </section>
+      <hr>
+      <section>
+        <h4>In the form below, add a submit button with the value "Submit Form".</h4>
+        <form action="/action_page.php">
+          <input type="text" name="username">
+          <input type="submit" value="Submit Form">
+        </form>
+      </section>
+      <section>
+        <h4>In the form below, add an input field that can only contain numbers</h4>
+        <h4>Use the correct input attributes to only allow numbers between 1 and 5.</h4>
+        <form>
+          <input type="number" min="1" max="5" disabled>
+          <input type="text" value="15" readonly>
+        </form>
+      </section>
+      <section>
+        <h4>Set the max numbers of characters allowed in the input field to 40.</h4>
+        <input type="text" maxlength="40">
+      </section>
     <script src="./index.js"></script>
     <!-- <script src="./createFunc.js"></script> -->
     <!-- <script src="./oop.js"></script> -->
