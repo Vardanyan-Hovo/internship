@@ -8,7 +8,3 @@
 <p>answer in folder bind</p>
 ```
 
-```
-<p>?</p>
-<p></p>
-```
